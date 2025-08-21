@@ -1027,7 +1027,7 @@
                 <p>Download the best Minecraft mods, resource packs, and shaders. Join our featured servers and check out our YouTube channel for tutorials and gameplay.</p>
                 <div class="hero-buttons">
                     <a href="#files" class="btn">Explore Files</a>
-                    <a href="https://youtube.com/lakslyminecraft" target="_blank" class="btn btn-secondary">
+                    <a href="https://youtube.com/@lakslyminecraft" target="_blank" class="btn btn-secondary">
                         <i class="fab fa-youtube"></i> Subscribe
                     </a>
                 </div>
@@ -1539,5 +1539,6 @@
 </body>
 
 </html>
+
 
 
