@@ -1237,7 +1237,7 @@
                 title: "Dashboard & Wings Setup",
                 description: "Setup For Dashboard & Wings Setup",
                 category: "code",
-                downloads: 12543,
+                downloads: 1543,
                 image: "./images/code1.png",
                 downloadUrl: "data:text/plain;charset=utf-8," 
             },
@@ -1246,7 +1246,7 @@
                 title: "Pterodactyl Panel",
                 description: "Setup For Pterodactyl Panel",
                 category: "code",
-                downloads: 12543,
+                downloads: 5973,
                 image: "./images/code2.png",
                 downloadUrl: "data:text/plain;charset=utf-8," + encodeURIComponent(`sudo apt update\nmkdir -p pterodactyl/panel\ncd pterodactyl/panel || exit\n\nnano docker-compose.yml\n\nversion: '3.8'\n\nx-common:\n  database:\n    &db-environment\n    MYSQL_PASSWORD: &db-password "CHANGE_ME"\n    MYSQL_ROOT_PASSWORD: "CHANGE_ME_TOO"\n  panel:\n    &panel-environment\n    APP_URL: "https://pterodactyl.example.com"\n    APP_TIMEZONE: "UTC"\n    APP_SERVICE_AUTHOR: "noreply@example.com"\n    TRUSTED_PROXIES: "*"\n  mail:\n    &mail-environment\n    MAIL_FROM: "noreply@example.com"\n    MAIL_DRIVER: "smtp"\n    MAIL_HOST: "mail"\n    MAIL_PORT: "1025"\n    MAIL_USERNAME: ""\n    MAIL_PASSWORD: ""\n    MAIL_ENCRYPTION: "true"\n\nservices:\n  database:\n    image: mariadb:10.5\n    restart: always\n    command: --default-authentication-plugin=mysql_native_password\n    volumes:\n      - "/srv/pterodactyl/database:/var/lib/mysql"\n    environment:\n      <<: *db-environment\n      MYSQL_DATABASE: "panel"\n      MYSQL_USER: "pterodactyl"\n\n  cache:\n    image: redis:alpine\n    restart: always\n\n  panel:\n    image: ghcr.io/pterodactyl/panel:latest\n    restart: always\n    ports:\n      - "80:80"\n      - "443:443"\n    links:\n      - database\n      - cache\n    volumes:\n      - "/srv/pterodactyl/var/:/app/var/"\n      - "/srv/pterodactyl/nginx/:/etc/nginx/http.d/"\n      - "/srv/pterodactyl/certs/:/etc/letsencrypt/"\n      - "/srv/pterodactyl/logs/:/app/storage/logs"\n    environment:\n      <<: [*panel-environment, *mail-environment]\n      DB_PASSWORD: *db-password\n      APP_ENV: "production"\n      APP_ENVIRONMENT_ONLY: "false"\n      CACHE_DRIVER: "redis"\n      SESSION_DRIVER: "redis"\n      QUEUE_DRIVER: "redis"\n      REDIS_HOST: "cache"\n      DB_HOST: "database"\n      DB_PORT: "3306"\n\nnetworks:\n  default:\n    ipam:\n      config:\n        - subnet: 172.20.0.0/16\n\ndocker-compose up -d\n\ndocker-compose run --rm panel php artisan p:user:make`)
             },
@@ -1255,7 +1255,7 @@
                 title: "Important Links",
                 description: "Important Links for Setup",
                 category: "code",
-                downloads: 12543,
+                downloads: 7582,
                 image: "./images/code3.png",
                 downloadUrl: "data:text/plain;charset=utf-8," + encodeURIComponent(`sudo apt update\nmkdir -p pterodactyl/panel\ncd pterodactyl/panel || exit\n\nnano docker-compose.yml\n\nversion: '3.8'\n\nx-common:\n  database:\n    &db-environment\n    MYSQL_PASSWORD: &db-password "CHANGE_ME"\n    MYSQL_ROOT_PASSWORD: "CHANGE_ME_TOO"\n  panel:\n    &panel-environment\n    APP_URL: "https://pterodactyl.example.com"\n    APP_TIMEZONE: "UTC"\n    APP_SERVICE_AUTHOR: "noreply@example.com"\n    TRUSTED_PROXIES: "*"\n  mail:\n    &mail-environment\n    MAIL_FROM: "noreply@example.com"\n    MAIL_DRIVER: "smtp"\n    MAIL_HOST: "mail"\n    MAIL_PORT: "1025"\n    MAIL_USERNAME: ""\n    MAIL_PASSWORD: ""\n    MAIL_ENCRYPTION: "true"\n\nservices:\n  database:\n    image: mariadb:10.5\n    restart: always\n    command: --default-authentication-plugin=mysql_native_password\n    volumes:\n      - "/srv/pterodactyl/database:/var/lib/mysql"\n    environment:\n      <<: *db-environment\n      MYSQL_DATABASE: "panel"\n      MYSQL_USER: "pterodactyl"\n\n  cache:\n    image: redis:alpine\n    restart: always\n\n  panel:\n    image: ghcr.io/pterodactyl/panel:latest\n    restart: always\n    ports:\n      - "80:80"\n      - "443:443"\n    links:\n      - database\n      - cache\n    volumes:\n      - "/srv/pterodactyl/var/:/app/var/"\n      - "/srv/pterodactyl/nginx/:/etc/nginx/http.d/"\n      - "/srv/pterodactyl/certs/:/etc/letsencrypt/"\n      - "/srv/pterodactyl/logs/:/app/storage/logs"\n    environment:\n      <<: [*panel-environment, *mail-environment]\n      DB_PASSWORD: *db-password\n      APP_ENV: "production"\n      APP_ENVIRONMENT_ONLY: "false"\n      CACHE_DRIVER: "redis"\n      SESSION_DRIVER: "redis"\n      QUEUE_DRIVER: "redis"\n      REDIS_HOST: "cache"\n      DB_HOST: "database"\n      DB_PORT: "3306"\n\nnetworks:\n  default:\n    ipam:\n      config:\n        - subnet: 172.20.0.0/16\n\ndocker-compose up -d\n\ndocker-compose run --rm panel php artisan p:user:make`)
             },
@@ -1264,7 +1264,7 @@
                 title: "Code #1",
                 description: "Setup Code #1",
                 category: "code",
-                downloads: 12543,
+                downloads: 27854,
                 image: "./images/code4.png",
                 downloadUrl: "data:text/plain;charset=utf-8," + encodeURIComponent(`sudo apt update\nmkdir -p pterodactyl/panel\ncd pterodactyl/panel || exit\n\nnano docker-compose.yml\n\nversion: '3.8'\n\nx-common:\n  database:\n    &db-environment\n    MYSQL_PASSWORD: &db-password "CHANGE_ME"\n    MYSQL_ROOT_PASSWORD: "CHANGE_ME_TOO"\n  panel:\n    &panel-environment\n    APP_URL: "https://pterodactyl.example.com"\n    APP_TIMEZONE: "UTC"\n    APP_SERVICE_AUTHOR: "noreply@example.com"\n    TRUSTED_PROXIES: "*"\n  mail:\n    &mail-environment\n    MAIL_FROM: "noreply@example.com"\n    MAIL_DRIVER: "smtp"\n    MAIL_HOST: "mail"\n    MAIL_PORT: "1025"\n    MAIL_USERNAME: ""\n    MAIL_PASSWORD: ""\n    MAIL_ENCRYPTION: "true"\n\nservices:\n  database:\n    image: mariadb:10.5\n    restart: always\n    command: --default-authentication-plugin=mysql_native_password\n    volumes:\n      - "/srv/pterodactyl/database:/var/lib/mysql"\n    environment:\n      <<: *db-environment\n      MYSQL_DATABASE: "panel"\n      MYSQL_USER: "pterodactyl"\n\n  cache:\n    image: redis:alpine\n    restart: always\n\n  panel:\n    image: ghcr.io/pterodactyl/panel:latest\n    restart: always\n    ports:\n      - "80:80"\n      - "443:443"\n    links:\n      - database\n      - cache\n    volumes:\n      - "/srv/pterodactyl/var/:/app/var/"\n      - "/srv/pterodactyl/nginx/:/etc/nginx/http.d/"\n      - "/srv/pterodactyl/certs/:/etc/letsencrypt/"\n      - "/srv/pterodactyl/logs/:/app/storage/logs"\n    environment:\n      <<: [*panel-environment, *mail-environment]\n      DB_PASSWORD: *db-password\n      APP_ENV: "production"\n      APP_ENVIRONMENT_ONLY: "false"\n      CACHE_DRIVER: "redis"\n      SESSION_DRIVER: "redis"\n      QUEUE_DRIVER: "redis"\n      REDIS_HOST: "cache"\n      DB_HOST: "database"\n      DB_PORT: "3306"\n\nnetworks:\n  default:\n    ipam:\n      config:\n        - subnet: 172.20.0.0/16\n\ndocker-compose up -d\n\ndocker-compose run --rm panel php artisan p:user:make`)
             },
@@ -1273,7 +1273,7 @@
                 title: "Code #2",
                 description: "Setup Code #2",
                 category: "code",
-                downloads: 12543,
+                downloads: 28654,
                 image: "./images/code5.jpg",
                 downloadUrl: "data:text/plain;charset=utf-8," + encodeURIComponent(`sudo apt update\nmkdir -p pterodactyl/panel\ncd pterodactyl/panel || exit\n\nnano docker-compose.yml\n\nversion: '3.8'\n\nx-common:\n  database:\n    &db-environment\n    MYSQL_PASSWORD: &db-password "CHANGE_ME"\n    MYSQL_ROOT_PASSWORD: "CHANGE_ME_TOO"\n  panel:\n    &panel-environment\n    APP_URL: "https://pterodactyl.example.com"\n    APP_TIMEZONE: "UTC"\n    APP_SERVICE_AUTHOR: "noreply@example.com"\n    TRUSTED_PROXIES: "*"\n  mail:\n    &mail-environment\n    MAIL_FROM: "noreply@example.com"\n    MAIL_DRIVER: "smtp"\n    MAIL_HOST: "mail"\n    MAIL_PORT: "1025"\n    MAIL_USERNAME: ""\n    MAIL_PASSWORD: ""\n    MAIL_ENCRYPTION: "true"\n\nservices:\n  database:\n    image: mariadb:10.5\n    restart: always\n    command: --default-authentication-plugin=mysql_native_password\n    volumes:\n      - "/srv/pterodactyl/database:/var/lib/mysql"\n    environment:\n      <<: *db-environment\n      MYSQL_DATABASE: "panel"\n      MYSQL_USER: "pterodactyl"\n\n  cache:\n    image: redis:alpine\n    restart: always\n\n  panel:\n    image: ghcr.io/pterodactyl/panel:latest\n    restart: always\n    ports:\n      - "80:80"\n      - "443:443"\n    links:\n      - database\n      - cache\n    volumes:\n      - "/srv/pterodactyl/var/:/app/var/"\n      - "/srv/pterodactyl/nginx/:/etc/nginx/http.d/"\n      - "/srv/pterodactyl/certs/:/etc/letsencrypt/"\n      - "/srv/pterodactyl/logs/:/app/storage/logs"\n    environment:\n      <<: [*panel-environment, *mail-environment]\n      DB_PASSWORD: *db-password\n      APP_ENV: "production"\n      APP_ENVIRONMENT_ONLY: "false"\n      CACHE_DRIVER: "redis"\n      SESSION_DRIVER: "redis"\n      QUEUE_DRIVER: "redis"\n      REDIS_HOST: "cache"\n      DB_HOST: "database"\n      DB_PORT: "3306"\n\nnetworks:\n  default:\n    ipam:\n      config:\n        - subnet: 172.20.0.0/16\n\ndocker-compose up -d\n\ndocker-compose run --rm panel php artisan p:user:make`)
             },
@@ -1282,7 +1282,7 @@
                 title: "Code #3",
                 description: "Setup Code #3",
                 category: "code",
-                downloads: 12543,
+                downloads: 9751,
                 image: "./images/code6.jpg",
                 downloadUrl: "data:text/plain;charset=utf-8," + encodeURIComponent(`sudo apt update\nmkdir -p pterodactyl/panel\ncd pterodactyl/panel || exit\n\nnano docker-compose.yml\n\nversion: '3.8'\n\nx-common:\n  database:\n    &db-environment\n    MYSQL_PASSWORD: &db-password "CHANGE_ME"\n    MYSQL_ROOT_PASSWORD: "CHANGE_ME_TOO"\n  panel:\n    &panel-environment\n    APP_URL: "https://pterodactyl.example.com"\n    APP_TIMEZONE: "UTC"\n    APP_SERVICE_AUTHOR: "noreply@example.com"\n    TRUSTED_PROXIES: "*"\n  mail:\n    &mail-environment\n    MAIL_FROM: "noreply@example.com"\n    MAIL_DRIVER: "smtp"\n    MAIL_HOST: "mail"\n    MAIL_PORT: "1025"\n    MAIL_USERNAME: ""\n    MAIL_PASSWORD: ""\n    MAIL_ENCRYPTION: "true"\n\nservices:\n  database:\n    image: mariadb:10.5\n    restart: always\n    command: --default-authentication-plugin=mysql_native_password\n    volumes:\n      - "/srv/pterodactyl/database:/var/lib/mysql"\n    environment:\n      <<: *db-environment\n      MYSQL_DATABASE: "panel"\n      MYSQL_USER: "pterodactyl"\n\n  cache:\n    image: redis:alpine\n    restart: always\n\n  panel:\n    image: ghcr.io/pterodactyl/panel:latest\n    restart: always\n    ports:\n      - "80:80"\n      - "443:443"\n    links:\n      - database\n      - cache\n    volumes:\n      - "/srv/pterodactyl/var/:/app/var/"\n      - "/srv/pterodactyl/nginx/:/etc/nginx/http.d/"\n      - "/srv/pterodactyl/certs/:/etc/letsencrypt/"\n      - "/srv/pterodactyl/logs/:/app/storage/logs"\n    environment:\n      <<: [*panel-environment, *mail-environment]\n      DB_PASSWORD: *db-password\n      APP_ENV: "production"\n      APP_ENVIRONMENT_ONLY: "false"\n      CACHE_DRIVER: "redis"\n      SESSION_DRIVER: "redis"\n      QUEUE_DRIVER: "redis"\n      REDIS_HOST: "cache"\n      DB_HOST: "database"\n      DB_PORT: "3306"\n\nnetworks:\n  default:\n    ipam:\n      config:\n        - subnet: 172.20.0.0/16\n\ndocker-compose up -d\n\ndocker-compose run --rm panel php artisan p:user:make`)
             }
@@ -1307,28 +1307,28 @@
                 id: 1,
                 title: "FREE VPS 24/7 with Pterodactyl Panel Setup & Wings | Step By Step Part 1",
                 thumbnail: "./images/thumbnail1.jpg",
-                views: "3.4K",
+                views: "93.4K",
                 date: "6 months ago"
             },
             {
                 id: 2,
                 title: "Free Minecraft Hosting With VPS And Wings Setup || Make Your Own Hosting Part 1 || Laksly Minecraft",
                 thumbnail: "./images/thumbnail2.jpg",
-                views: "2.5K",
+                views: "72.5K",
                 date: "7 months ago"
             },
             {
                 id: 3,
                 title: "✅ Top 5 Best Minecraft Hosting in India (Low Ping & High Performance!)",
                 thumbnail: "./images/thumbnail3.jpg",
-                views: "1.6K",
+                views: "1.1M",
                 date: "5 months ago"
             },
             {
                 id: 4,
                 title: "How To Setup PTerodactyl panel & Wings With Nodes Config | Sanjit Gaming | Part 2 #lakslyminecraft",
                 thumbnail: "./images/thumbnail4.jpg",
-                views: "1.2K",
+                views: "1.2M",
                 date: "6 months ago"
                 
             }
@@ -1539,4 +1539,5 @@
 </body>
 
 </html>
+
 
